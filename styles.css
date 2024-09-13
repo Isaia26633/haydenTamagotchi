@@ -1,0 +1,21 @@
+body{
+    background-color: hsl(205, 100%, 9%);
+    color: #ffffff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+#hayden{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+#haydenBox{
+    background-color: hsl(205, 96%, 45%);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    height: 700px;
+    width: 800px;  
+    display: inline-block;
+}
