@@ -1,21 +1,145 @@
-body{
+body {
     background-color: hsl(205, 100%, 9%);
     color: #ffffff;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
     text-align: center;
+    padding: 1rem;
 }
 
-#hayden{
-    margin-top: 20px;
-    margin-left: 20px;
-}
-
-#haydenBox{
-    background-color: hsl(205, 96%, 45%);
+#haydenBox {
+    background-image: url("img/8bitBG.png");
+    background-size: cover;
     border-radius: 10px;
-    padding: 10px;
-    margin: 10px;
-    height: 700px;
-    width: 800px;  
+    padding: 1rem;
+    height: 70vh; /* Use viewport height for responsiveness */
+    width: 90vw; /* Use viewport width for responsiveness */
+    max-width: 800px;
+    max-height: 700px;
     display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid black;
+}
+
+#howToPlay {
+    background-color: #fff;
+    color: #333;
+    border-radius: 10px;
+    margin: 2rem auto;
+    padding: 2rem;
+    max-width: 800px;
+    width: 90%;
+    padding-bottom: 5rem; /* Adjust padding for footer */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#howToPlay h3 {
+    color: hsl(205, 96%, 45%);
+    margin-top: 0;
+}
+
+#howToPlay p,
+#howToPlay ul {
+    margin: 1rem 0;
+}
+
+#howToPlay ul {
+    padding-left: 1.5rem;
+}
+
+#howToPlay hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 2rem 0;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: hsl(205, 96%, 45%);
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    height: 60px;
+    box-sizing: border-box;
+    font-size: medium;
+    padding-left: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+footer h1 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    margin-left: 1rem;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    #haydenBox {
+        height: 60vh;
+        width: 80vw;
+    }
+
+    #howToPlay {
+        padding: 1rem;
+    }
+
+    footer {
+        padding: 0.5rem;
+    }
+
+    footer h1 {
+        font-size: 1em;
+    }
+
+    footer a {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    #haydenBox {
+        height: 50vh;
+        width: 90vw;
+    }
+
+    #howToPlay {
+        padding: 0.5rem;
+    }
+
+    footer {
+        padding: 0.5rem;
+    }
+
+    footer h1 {
+        font-size: 0.9em;
+    }
+
+    footer a {
+        font-size: 0.8em;
+    }
 }
