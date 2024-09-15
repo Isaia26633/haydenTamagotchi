@@ -14,13 +14,13 @@ header {
     padding: 1rem;
 }
 
-#haydenBox {
+#gameBox {
     background-image: url("img/8bitBG.png");
     background-size: cover;
     border-radius: 10px;
     padding: 1rem;
-    height: 70vh; /* Use viewport height for responsiveness */
-    width: 90vw; /* Use viewport width for responsiveness */
+    height: 70vh;
+    width: 90vw;
     max-width: 800px;
     max-height: 700px;
     display: inline-block;
@@ -31,16 +31,27 @@ header {
     border: 5px solid black;
 }
 
+
+
+#retry {
+    display: none;
+    position: relative;
+    top: 80%;
+    left: 50%;
+}
+
+
+
+/* howToPlay.html */
+
 #howToPlay {
-    background-color: #fff;
-    color: #333;
+    color: #ffffff;
     border-radius: 10px;
     margin: 2rem auto;
     padding: 2rem;
     max-width: 800px;
     width: 90%;
-    padding-bottom: 5rem; /* Adjust padding for footer */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding-bottom: 5rem;
 }
 
 #howToPlay h3 {
@@ -62,6 +73,9 @@ header {
     border-top: 1px solid #ddd;
     margin: 2rem 0;
 }
+
+
+/* both index.html and howToPlay.hml */
 
 footer {
     position: fixed;
@@ -97,9 +111,12 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Media Queries for Responsive Design */
+
+
+/* for reszing other devices */
+
 @media (max-width: 768px) {
-    #haydenBox {
+    #gameBox {
         height: 60vh;
         width: 80vw;
     }
@@ -122,7 +139,7 @@ footer a:hover {
 }
 
 @media (max-width: 480px) {
-    #haydenBox {
+    #gameBox {
         height: 50vh;
         width: 90vw;
     }
