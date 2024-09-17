@@ -1,4 +1,4 @@
-
+const canvas = document.getElementById('canvas');
 
 let hunger = 100;
 let health = 100;
@@ -11,16 +11,12 @@ let stage = 1;
 let death = false;
 let sickStage = 0;
 
-function feed() {
-    if (hunger = 100) {
-        return full()
-    } else {
-        hunger += 1;
-    }
+function sleep() {
+    tired = false;
+    console.log(tired);
 }
 
-function full() {
-    sickness++;
+function sicknessStage() {
     console.log(sickness);
     console.log(sickStage);
     if (sickness > 20 && sickStage == 0) {
@@ -38,6 +34,20 @@ function full() {
 }
 
 
+function feed() {
+    if (hunger = 100) {
+        return full()
+    } else {
+        hunger += 1;
+    }
+}
+
+function full() {
+    sickness++;
+    sicknessStage();
+}
+
+
 function gameLoop() {
     update();
     requestAnimationFrame(gameLoop);
@@ -47,8 +57,8 @@ requestAnimationFrame(gameLoop);
 
 function update() {
     if (death) {
-        document.getElementById('gameBox').style.backgroundImage = "url('img/gameOver.png')";
-        document.getElementById('gameBox').style.transition = 'background-image 1s ease';
+        document.getElementById('canvas').style.backgroundImage = "url('img/gameOver.png')";
+        document.getElementById('canvas').style.transition = 'background-image 1s ease';
         document.getElementById('stats').style.display = 'none';
         document.getElementById('buttons').style.display = 'none';
         document.getElementById('retry').style.display = 'block';
