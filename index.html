@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>へイデンゴッチ</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -22,7 +23,7 @@
             <button id="play">play</button>
             <button id="clean">clean</button>
             <button onclick="heal()" id="heal">medicate</button>
-            <button id='settings'>settings</button>
+            <button onclick="night()" id="light">light</button>
         </div>
         <button id='retry' onclick="location.reload()">Play Again?</button>
     </div>
@@ -32,6 +33,7 @@
         <div id="hunger">hunger:</div>
         <div id="sick">sickness:</div>
         <div id="age">age:</div>
+        <button id='settings'>settings</button>
     </div>
     <footer>
         <h1>Hayden-Gotchi</h1>

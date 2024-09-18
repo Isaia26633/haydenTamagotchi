@@ -30,7 +30,7 @@ header {
 }
 
 #canvas-container {
-    background-image: url("img/8bitBG.png");
+    background-image: url("img/png/8bitBG.png");
     background-size: cover;
     border-radius: 10px;
     padding: 1rem;
@@ -45,7 +45,6 @@ header {
     transform: translate(-50%, -50%);
     border: 5px solid black;
 }
-
 
 #menu {
     position: absolute;
@@ -73,9 +72,8 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-
 #retry {
-    /* display: none; */
+    visibility: hidden;
     position: absolute;
     left: 25%;
 }
@@ -95,12 +93,29 @@ header {
     text-align: center;
 }
 
+#stats button {
+    display: inline-block;
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: hsl(205, 96%, 45%);
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+    font-size: 1rem;
+    text-align: center;
+}
+
 
 #menu button:hover {
     background-color: hsl(205, 96%, 55%);
 }
 
-
+#menu button:hover {
+    background-color: hsl(205, 96%, 55%);
+}
 
 /* howToPlay.html */
 
@@ -134,8 +149,7 @@ header {
     margin: 2rem 0;
 }
 
-
-/* both index.html and howToPlay.hml */
+/* both index.html and howToPlay.html */
 
 footer {
     position: fixed;
@@ -153,8 +167,6 @@ footer {
     padding-left: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
-
-
 footer h1 {
     margin: 0;
     font-size: 1.2em;
@@ -169,54 +181,4 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
-}
-
-
-
-/* for reszing other devices */
-
-@media (max-width: 768px) {
-    #canvas {
-        height: 60vh;
-        width: 80vw;
-    }
-
-    #howToPlay {
-        padding: 1rem;
-    }
-
-    footer {
-        padding: 0.5rem;
-    }
-
-    footer h1 {
-        font-size: 1em;
-    }
-
-    footer a {
-        font-size: 0.9em;
-    }
-}
-
-@media (max-width: 480px) {
-    #canvas {
-        height: 50vh;
-        width: 90vw;
-    }
-
-    #howToPlay {
-        padding: 0.5rem;
-    }
-
-    footer {
-        padding: 0.5rem;
-    }
-
-    footer h1 {
-        font-size: 0.9em;
-    }
-
-    footer a {
-        font-size: 0.8em;
-    }
 }

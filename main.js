@@ -18,8 +18,8 @@ requestAnimationFrame(gameLoop);
 
 function update() {
     if (death) {
-        document.getElementById('canvas').style.backgroundImage = "url('img/gameOver.png')";
-        document.getElementById('canvas').style.transition = 'background-image 1s ease';
+        document.getElementById('canvas-container').style.backgroundImage = "url('img/png/gameOver.png')";
+        document.getElementById('canvas-container').style.transition = 'background-image 1s ease';
         document.getElementById('retry').style.display = 'block';
     }
 }
