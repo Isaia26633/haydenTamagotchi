@@ -1,6 +1,7 @@
 let sickness = 0;
 let stage = 1;
 let sickStage = 0;
+const healSpeed = 5
 
 function sicknessStage() {
     console.log(sickness);
@@ -17,4 +18,17 @@ function sicknessStage() {
         death = true;
         console.log("ur ded lol");
     }
+}
+
+
+function heal() {
+    setTimeout(function () {
+        sickness -= healSpeed;
+        if (sickness < 0) {
+            sickness = 0;
+            console.log("healthy");
+        }
+        console.log('healed');
+    }, 3000);
+    console.log(sickness)
 }
