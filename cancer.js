@@ -20,7 +20,7 @@ function sicknessStage() {
     }
 }
 
-
+//heals the thingy
 function heal() {
     setTimeout(function () {
         sickness -= healSpeed;
