@@ -50,6 +50,7 @@ function update() {
 let volSlider = document.getElementById('volume');
 let volDisplay = document.getElementById('volumeText');
 
+
 volDisplay.innerHTML = 'Volume: ' + volSlider.value;
 
 volSlider.oninput = function () {
