@@ -20,16 +20,12 @@ function gameLoop() {
 
 requestAnimationFrame(gameLoop);
 
-function healthCheck() {
-    if (health <= 75) {
-        document.getElementById('health').innerHTML = 'health: ❤️❤️❤️🖤'
-    } else if (health <= 50) {
-        document.getElementById('health').innerHTML = 'health: ❤️❤️🖤🖤'
-    } else if (health <= 25) {
-        document.getElementById('health').innerHTML = 'health: ❤️🖤🖤🖤'
-    } else if (health <= 0) {
-        document.getElementById('health').innerHTML = 'health: 🖤🖤🖤🖤'
+function healthDecrease() {
+    if (health > 0){
+        health --;
+    } else {
         death = true;
+        clearInterval(healthDecrease);
     }
 }
 
@@ -40,7 +36,7 @@ function update() {
         document.getElementById('retry').style.display = 'block';
     }
 
-    healthCheck();
+    setInterval(healthDecrease(), 5000)
 
 
 }
