@@ -25,7 +25,6 @@ function healthDecrease() {
         health --;
     } else {
         death = true;
-        clearInterval(healthDecrease);
     }
 }
 
@@ -35,8 +34,6 @@ function update() {
         document.getElementById('canvas-container').style.transition = 'background-image 1s ease';
         document.getElementById('retry').style.display = 'block';
     }
-
-    setInterval(healthDecrease(), 5000)
 
 
 }
