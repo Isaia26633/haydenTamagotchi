@@ -182,3 +182,21 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
+/* resize for other devices */
+@media (max-width: 1366){
+    #canvas {
+        height: 600px;
+        width: 700px;
+    }
+    #canvas-container {
+        height: 600px;
+        width: 700px;
+    }
+    #menu {
+        width: 150px;
+    }
+    #stats {
+        width: 150px;
+    }
+}
