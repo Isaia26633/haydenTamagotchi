@@ -1,5 +1,7 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
+const grave = new Image();
+grave.src = 'img/png/grave.png';
 
 
 let health = 100;
@@ -12,30 +14,42 @@ function gameLoop() {
     update();
     requestAnimationFrame(gameLoop);
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = 'black';
-    ctx.fillRect(0, 0, 30,20);
+    ctx.imageSmoothingEnabled = false;
+    ctx.drawImage(pet.img, pet.x, pet.y, pet.width, pet.height);
+    // if (pet.move) {
+    //     if (pet.direction == 1) {
+    //         pet.x--;
+    //         walk();
+    //     } else {
+    //         pet.x++;
+    //     }
+    // }
+    // if (pet.x > canvas.width - pet.width) {
+    //     pet.direction = 0;
+    // } else if (pet.x < 0) {
+    //     pet.direction = 1;
+    // }
 }
-
-
-
 requestAnimationFrame(gameLoop);
 
+
+
+
 function healthDecrease() {
-    if (health > 0){
-        health --;
+    if (health > 0) {
+        health--;
     } else {
         death = true;
     }
 }
 
+
+
 function update() {
     if (death) {
-        document.getElementById('canvas-container').style.backgroundImage = "url('img/png/gameOver.png')";
-        document.getElementById('canvas-container').style.transition = 'background-image 1s ease';
-        document.getElementById('retry').style.display = 'block';
+        ctx.drawImage(grave, 300, 535, 90, 90);
+        document.getElementById('retry').style.visibility = 'visible';
     }
-
-
 }
 
 
