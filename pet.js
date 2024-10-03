@@ -2,11 +2,12 @@ const pet = {};
 
 pet.x = 105;
 pet.y = 470;
-pet.width = 200;
-pet.height = 200;
+pet.width = 100;
+pet.height = 100;
 pet.img = new Image();
-pet.img.src = 'img/sprites/hayden/haydenL.png';
+pet.img.src = 'img/sprites/hayden/walkcycle/r/r.png';
 pet.img.id = '1';
+pet.frame = 0;
 
 
 //direction pet is facing
@@ -17,17 +18,21 @@ pet.moving = true;
 
 
 function draw() {
+    pet.frame = Math.round(ticks/10) % 2;
+    console.log(pet.frame);
+    
     //draws pet
-    ctx.drawImage(pet.img, pet.x, pet.y, pet.width, pet.height);
+    ctx.drawImage(pet.img, pet.x, pet.y, pet.width, pet.height, 0, pet.frame * 100, pet.width, pet.height);
+    console.log(pet.x, pet.y);
     //moves the pet
     if (pet.moving) {
         if (direction == 1) {
-            pet.img.src = 'img/sprites/hayden/haydenL.png';
+            pet.img.src = 'img/sprites/hayden/walkcycle/l/l.png';
             pet.img.id = '1';
             pet.x--;
             pet.moving = true;
         } else {
-            pet.img.src = 'img/sprites/hayden/haydenR.png';
+            pet.img.src = 'img/sprites/hayden/walkcycle/r/r.png';
             pet.img.id = '0';
             pet.x++;
             pet.moving = true;
@@ -41,3 +46,4 @@ function draw() {
         direction = 0;
     }
 }
+

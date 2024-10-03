@@ -9,15 +9,16 @@ let happiness = 100;
 let discipline = 0;
 let clean = 100;
 let death = false;
+let ticks = 0;
 
 function gameLoop() {
     update();
-    requestAnimationFrame(gameLoop);
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     //disables smoothing so the image doesnt look like poo
     ctx.imageSmoothingEnabled = false;
     draw();
     // console.log(direction);
+    requestAnimationFrame(gameLoop);
 }
 requestAnimationFrame(gameLoop);
 
@@ -40,6 +41,7 @@ function update() {
         ctx.drawImage(grave, pet.x, 535, 90, 90);
         document.getElementById('retry').style.visibility = 'visible';
     }
+    ticks++;
 }
 
 
