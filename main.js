@@ -16,7 +16,9 @@ function gameLoop() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     //disables smoothing so the image doesnt look like poo
     ctx.imageSmoothingEnabled = false;
-    draw();
+    if (death == false){
+        draw();
+    }
     // console.log(direction);
     requestAnimationFrame(gameLoop);
 }
@@ -37,8 +39,9 @@ function healthDecrease() {
 
 function update() {
     if (death) {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.drawImage(grave, pet.x, 535, 90, 90);
+        console.log('dead');
+        pet.moving = false;
         document.getElementById('retry').style.visibility = 'visible';
     }
     ticks++;
