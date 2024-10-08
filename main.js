@@ -17,9 +17,10 @@ function gameLoop() {
     //disables smoothing so the image doesnt look like poo
     ctx.imageSmoothingEnabled = false;
     if (death == false){
-        draw();
+        // draw();
+        animate();
     }
-    // console.log(direction);
+    console.log(direction);
     requestAnimationFrame(gameLoop);
 }
 requestAnimationFrame(gameLoop);

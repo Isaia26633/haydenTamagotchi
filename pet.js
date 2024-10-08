@@ -8,7 +8,7 @@ pet.img = new Image();
 pet.img.src = 'img/sprites/hayden/haydenR.png';
 // pet.img.src = 'img/sprites/hayden/walkcycle/r/r.png';
 pet.img.id = '1';
-pet.frame = 0;
+// pet.frame = 0;
 
 
 //direction pet is facing
@@ -19,8 +19,7 @@ pet.moving = true;
 
 
 function draw() {
-    pet.frame = Math.round(ticks/10) % 2;
-    console.log(pet.frame);
+    // console.log(pet.frame);
     
     //draws pet
     ctx.drawImage(pet.img, pet.x, pet.y, pet.height, pet.width);
@@ -28,13 +27,11 @@ function draw() {
     //moves the pet
     if (pet.moving) {
         if (direction == 1) {
-            // pet.img.src = 'img/sprites/hayden/walkcycle/l/l.png';
             pet.img.src = 'img/sprites/hayden/haydenR.png';
             pet.img.id = '1';
             pet.x--;
             pet.moving = true;
         } else {
-            // pet.img.src = 'img/sprites/hayden/walkcycle/r/r.png';
             pet.img.src = 'img/sprites/hayden/haydenR.png';
             pet.img.id = '0';
             pet.x++;
@@ -42,11 +39,12 @@ function draw() {
         }
     }
     //bounces pet back if it hits the edge of the canvas and changes direction
-    if (pet.x + pet.width > canvas.width) {
+    if (pet.x + (pet.width - 50) > canvas.width) {
         console.log('hit');
         direction = 1;
-    } else if (pet.x < 0) {
+    } else if ((pet.x + 50) < 0) {
         direction = 0;
+        console.log('hit');
     }
 }
 
